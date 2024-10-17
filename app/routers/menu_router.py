@@ -4,6 +4,10 @@ from app.services.menu_service import generate_menu
 
 router = APIRouter()
 
+@router.get("/")
+def getDefault():
+    return {"Hello" : "World!"}
+
 @router.post("/generate-menu/")
 def generate_menu_api(request: MenuRequest):
     try:
