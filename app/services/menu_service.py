@@ -19,7 +19,7 @@ model = genai.GenerativeModel('gemini-pro')
 def generate_menu(optional_dish: str = None, ingredients: list = None, supplies: list = None):
     # Set default values if inputs are missing
     if optional_dish is None or optional_dish.strip() == "":
-        optional_dish = "เมนูอาหารทำง่าย"  # Classic dish in Thai
+        optional_dish = "เมนูทำง่าย"  # Classic dish in Thai
     if ingredients is None or len(ingredients) == 0:
         ingredients = ["วัตถุดิบหาง่ายตามบ้าน"]  # Generic ingredient placeholder
     if supplies is None or len(supplies) == 0:
@@ -48,7 +48,7 @@ def generate_menu(optional_dish: str = None, ingredients: list = None, supplies:
             ]
         }}
     }}
-    แทนที่ค่า value ด้วยเนื้อหาจริง หากคุณไม่รูจักเมนูหรือคิดว่าพิมพ์ผิดให้บอกว่าไม่รู้จัก
+    แทนที่ค่า value ด้วยเนื้อหาจริง หากไม่รู้จักชื่อเมนูที่ผู้ใช้บอกให้สุ่มเมนูใกล้เคียง
     """
     
     # Format the prompt
